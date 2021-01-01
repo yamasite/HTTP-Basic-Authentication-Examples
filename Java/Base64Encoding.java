@@ -6,8 +6,6 @@ import java.net.http.HttpResponse;
 import java.util.Base64;
 
 
-
-
 public class Base64Encoding {
 
     public static void main(String[] args) throws IOException, InterruptedException {
