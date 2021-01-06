@@ -5,7 +5,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Base64;
 
-
+// Basic authentication example
 public class Base64Encoding {
 
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -23,15 +23,16 @@ public class Base64Encoding {
 
         HttpClient client = HttpClient.newHttpClient();
 
-        String body = "{\r\n    \"destination\": \"userB\",\r\n    \"enable_offline_messaging\": false,\r\n    \"enable_historical_messaging\": false,\r\n    \"payload\": \"Hello\"\r\n}";
+        String body = "{\"destination\": \"userB\", \"enable_offline_messaging\": false,  \"enable_historical_messaging\": false,    \"payload\": \"Hello\"}";
 
+        // Build HTTP request
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.agora.io/dev/v2/project/a4eedf51cd3d4c8992adce45145c1bd8/rtm/users/userA/peer_messages?wait_for_ack=true"))
                 .POST(HttpRequest.BodyPublishers.ofString(body))
                 .header("Authorization", authorizationHeader)
                 .header("Content-Type", "text/plain")
                 .build();
-
+        // Send HTTP request
         HttpResponse<String> response = client.send(request,
                 HttpResponse.BodyHandlers.ofString());
 

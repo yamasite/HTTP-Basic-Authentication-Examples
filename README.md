@@ -4,4 +4,5 @@ This repo provides a set of examples to generate the correct authorization heade
 
 - Java
 - PHP
-- Python 
+- Python
+- Go
