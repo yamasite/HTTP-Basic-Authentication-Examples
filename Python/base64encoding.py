@@ -28,7 +28,7 @@ headers['Authorization'] = 'basic ' + credential
 headers['Content-Type'] = 'text/plain'
 
 # Send request with path
-conn.request("POST", "/dev/v2/project/a4eedf51cd3d4c8992adce45145c1bd8/rtm/users/userA/peer_messages?wait_for_ack=true", payload, headers)
+conn.request("POST", "/dev/v2/project/<your-App-ID>/rtm/users/userA/peer_messages?wait_for_ack=true", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))

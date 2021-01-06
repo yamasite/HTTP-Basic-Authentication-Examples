@@ -15,7 +15,7 @@ $arr_header = "Authorization: Basic " . $base64Credentials;
 $curl = curl_init();
 // Send request with specified header and body
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://api.agora.io/dev/v2/project/a4eedf51cd3d4c8992adce45145c1bd8/rtm/users/userA/peer_messages?wait_for_ack=true',
+  CURLOPT_URL => 'https://api.agora.io/dev/v2/project/<your-App-ID>/rtm/users/userA/peer_messages?wait_for_ack=true',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,

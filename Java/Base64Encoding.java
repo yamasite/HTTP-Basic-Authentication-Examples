@@ -27,7 +27,7 @@ public class Base64Encoding {
 
         // Build HTTP request
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.agora.io/dev/v2/project/a4eedf51cd3d4c8992adce45145c1bd8/rtm/users/userA/peer_messages?wait_for_ack=true"))
+                .uri(URI.create("https://api.agora.io/dev/v2/project/<your-App-ID>er_messages?wait_for_ack=true"))
                 .POST(HttpRequest.BodyPublishers.ofString(body))
                 .header("Authorization", authorizationHeader)
                 .header("Content-Type", "text/plain")
