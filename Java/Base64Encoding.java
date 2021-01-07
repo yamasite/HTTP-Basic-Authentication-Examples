@@ -18,7 +18,7 @@ public class Base64Encoding {
         // Concatenate and encode with base64
         String plainCredentials = customerKey + ":" + customerSecret;
         String base64Credentials = new String(Base64.getEncoder().encode(plainCredentials.getBytes()));
-
+        // Create authorization header
         String authorizationHeader = "Basic " + base64Credentials;
 
         HttpClient client = HttpClient.newHttpClient();
