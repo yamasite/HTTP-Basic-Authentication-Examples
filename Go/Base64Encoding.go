@@ -20,7 +20,7 @@ func main() {
   plainCredentials := customerKey + ":" + customerSecret
   base64Credentials := base64.StdEncoding.EncodeToString([]byte(plainCredentials))
 
-  url := "https://api.agora.io/dev/v2/project/<your-App-ID>/rtm/users/userA/peer_messages?wait_for_ack=true"
+  url := "https://api.agora.io/dev/v2/project/<Your App ID>/rtm/users/userA/peer_messages?wait_for_ack=true"
   method := "POST"
 
   payload := strings.NewReader(`{"destination": "userB",  "enable_offline_messaging": false,  "enable_historical_messaging": false,   "payload": "Hello"}`)

@@ -8,3 +8,4 @@ This repo provides a set of examples to generate the correct authorization heade
 - PHP
 - Python
 - Go
+- node.js
